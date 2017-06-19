@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>分页demo</title>
+	<link rel="stylesheet" type="text/css" href="../css/paging.css">
+	<style type="text/css">
+		.mainbody{
+			padding: 10%;
+		}
+	</style>
+</head>
+<body>
+
+<div class="mainbody"></div>
+
+<script type="text/javascript" src="../js/paging.js"></script>
+<script type="text/javascript">
+	
+	/*运行分页函数, 
+	*第一个参数为当前页，
+	*第二个为最大页，
+	*第三个为跳转链接要携带的参数，是个数组，里面的元素为若干个
+	json对象，分别是键名和键值
+	*/
+	paging(10, 100, '.mainbody', [
+		{
+			'name': 'nowpage',
+			'value': 10
+		},{
+			'name': 'maxpage',
+			'value': 100
+		},{
+			'name': 'type',
+			'value': 'windows'
+		}
+	]);
+
+	
+	paging(4, 100, '.mainbody', [
+		{
+			'name': 'nowpage',
+			'value': 4
+		},{
+			'name': 'maxpage',
+			'value': 100
+		},{
+			'name': 'type',
+			'value': 'linux'
+		}
+	]);
+
+	paging(97, 100, '.mainbody', [
+		{
+			'name': 'nowpage',
+			'value': 97
+		},{
+			'name': 'maxpage',
+			'value': 100
+		},{
+			'name': 'type',
+			'value': 'minix'
+		}
+	]);
+
+
+</script>
+</body>
+</html>
